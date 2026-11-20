@@ -1,3 +1,5 @@
+Repositorio GitHub: https://github.com/JuanPCT/correa-post1-u11
+
 # Unidad 11 — Refactorización de inventario
 
 La primera versión conserva deliberadamente un método largo y dos switches duplicados para poder fijar la conducta con tests antes de refactorizar. El historial local separa baseline, caracterización, refactor y regla de paquetes.
