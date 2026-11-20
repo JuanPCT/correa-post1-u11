@@ -8,4 +8,5 @@ class ArquitecturaPaquetesTest {
     private final JavaClasses clases=new ClassFileImporter().importPackages("co.edu.ufps.inventario");
     @Test void paquetesNoFormanCiclos(){slices().matching("co.edu.ufps.inventario.(*)..").should().beFreeOfCycles().check(clases);}
     @Test void dominioNoDependeDeFramework(){noClasses().that().resideInAPackage("..domain..").should().dependOnClassesThat().resideInAnyPackage("org.springframework..").check(clases);}
+    @Test void inventarioNoDependeDeReportes(){noClasses().that().resideInAPackage("..inventario..").should().dependOnClassesThat().resideInAPackage("..reportes..").check(clases);}
 }
